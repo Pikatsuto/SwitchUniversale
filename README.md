@@ -52,8 +52,6 @@ and recently SwitchGet will also be available independently of SwitchUniversale 
 
 If there's a lot of people interested, there will probably be one of the public beta as I'm between half and two thirds of them.
 
-Translated with www.DeepL.com/Translator (free version)
-
 ## FR
 
 ## Créer par Pikatsuto avec Murasaki , Edzi et M3ggy
