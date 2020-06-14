@@ -1,6 +1,5 @@
 # Switch Universale
 
-### GPL2 License
 
 ## EN
 
@@ -17,16 +16,14 @@ SwitchGet: This program is a packer manager that will be connected to the Poyo I
 SwitchGet will be accessible in SwitchUniversale but also in the cms directly.
 
 #### There will also be other programs linked to SwitchGet:
-
-`
+```
 SD Updater
 SD Corruption Cleaner
 SD Cleaner/Reinstall
 SD Backup
-`
-
+```
 #### Feature list:
-`
+```
 (Done)  NSC Builder
 (Done)  [NSP NSZ XCi XCZ] Converter
 (Done)  LanPlay
@@ -36,14 +33,13 @@ SD Backup
 (To Do) SD Backup
 (Done)  [Android Linux] Flasher
 (Done)  Payload Loader
-(Done)  Is My Switch Patched.
+(Done)  Is My Switch Patched
 (Done)  Install Driver
 (To Do) SwitchGet (Apps And Theme Manager)
 (To Do) SD Cleaner
 (To Do) NSP Spliter
 (To Do) NST To XCI
-`
-
+```
 #### SwitchUniversale will also be releasing a graphical version a little later for those who have difficulties with the terminal for SwitchGet for example.
 
 and recently SwitchGet will also be available independently of SwitchUniversale for developers
@@ -67,16 +63,14 @@ SwitchGet: Ce programme est un gestionnaire de packer qui sera connecté au base
 SwitchGet sera accessible dans SwitchUniversale mes aussi dans le cms directement.
 
 #### Il y aura aussi d'autres programmes relier a SwitchGet:
-
-`
+```
 SD Updater
 SD Corruption Cleaner
 SD Cleaner/Réinstaller
 SD Backup
-`
-
+```
 #### Liste des fonctionalité:
-`
+```
 (Fait)     NSC Builder
 (Fait)     [NSP NSZ XCi XCZ] Converter
 (Fait)     LanPlay
@@ -92,8 +86,7 @@ SD Backup
 (À Faire)  SD Cleaner
 (À Faire)  NSP Spliter
 (À Faire)  NST To XCI
-`
-
+```
 #### SwitchUniversale verra aussi Sortir un peut plus tard un version graphique pour ceux aillant des difficulté avec le terminal pour SwitchGet par exemple
 
 et dernièrement SwitchGet sera aussi disponible indépendamment de SwitchUniversale pour les développeurs
@@ -105,14 +98,12 @@ S'il y a beaucoup de monde intéressé il y aura surement un des bêta publics a
 
 ## Credit 
 ### --( ° Inspiration ° )--
-
-`
+```
 IcosaSwitch :           https://github.com/IcosaSwitch/IcosaSwitch
 SwitchTools :           https://github.com/THZoria/switchtools
-`
-
+```
 ### --( ° Use ° )--
-`
+```
 7ZIP :                  https://www.7-zip.org/
 Wget :                  https://eternallybored.org/misc/wget/
 CommandLineDiskImager : https://github.com/davidferguson/CommandLineDiskImager
@@ -124,4 +115,4 @@ TegraRCM :              https://github.com/eliboa/TegraRcmGUI
 Zadig :                 https://zadig.akeo.ie/
 HomeBrew AppsStore :    https://apps.fortheusers.org/switch
 PoyoTools :             https://github.com/Murasaki64/PoyoTools
-`
+```
