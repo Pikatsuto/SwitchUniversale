@@ -1,0 +1,16 @@
+[
+	{
+		"type": "numeric",
+		"title": "Info Depth",
+		"desc": "Max depth for file info and extraction",
+		"section": "Tools",
+		"key": "depth"
+	},
+	{
+		"type": "string",
+		"title": "Extract Regex",
+		"desc": "Regex specifying which files inside the container should be extracted",
+		"section": "Tools",
+		"key": "extractregex"
+	}
+]

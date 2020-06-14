@@ -1,0 +1,2 @@
+def SwitchUniversaleUpdater():
+    print("")
