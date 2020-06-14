@@ -104,7 +104,7 @@ et dernièrement SwitchGet sera aussi disponible indépendamment de SwitchUniver
 
 S'il y a beaucoup de monde intéressé il y aura surement un des bêta publics au fur et à mesure du de j'en suis entre la moitié et les 2 tiers
 
-## Crédit 
+## Credit 
 ### --( ° Inspiration ° )--
 
 `
