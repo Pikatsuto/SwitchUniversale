@@ -1,6 +1,6 @@
 # Switch Universale
 
-### GPL2 License
+## GPL2 License
 
 ## EN
 
