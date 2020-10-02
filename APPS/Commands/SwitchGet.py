@@ -1,4 +1,5 @@
 import os
+import requests
 import json
 from Commands.Clear import Clear
 
@@ -6,6 +7,34 @@ def SwitchGet():
 
     RepoApps = "https://switchbru.com/appstore/repo.json"
     RepoPoyoTheme = "https://raw.githubusercontent.com/Bakassable/PoyoTools/master/PoyoTools%20DB/themes.json"
+
+    Lettre = [
+        "a",
+        "b",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+    ]
 
     PatchSD = {
         "Atmosphere": {
@@ -67,12 +96,21 @@ def SwitchGet():
     }
 
 
-    os.system(f'Data\\Wget\\wget.exe "{RepoApps}"')
+    r = requests.get(RepoApps)
+    with open("repo.json", 'wb') as fd:
+        for chunk in r.iter_content(chunk_size=128):
+            fd.write(chunk)
+            
+    r = requests.get(RepoPoyoTheme)
+    with open("themes.json", 'wb') as fd:
+        for chunk in r.iter_content(chunk_size=128):
+            fd.write(chunk)
+
+
     with open("repo.json", "r") as file:
         DBUse = json.load(file)#ouverture de la DB
         file.close
 
-    os.system(f'Data\\Wget\\wget.exe "{RepoPoyoTheme}"')
     with open("themes.json", "r") as file:
         DBPoyoTheme = json.load(file)#ouverture de la DB
         file.close
@@ -120,6 +158,7 @@ def SwitchGet():
         Recherche = Recherche.lower()
     
     FileDownload = []
+    FilDirUse = []
     URL = []
     NameUse = []
     AuthorUse = []
@@ -129,8 +168,12 @@ def SwitchGet():
         FileSplit[0] = "https://api.github.com/repos/"
         FileSplit.append("/releases/latest")
         FileSplit = (f"{FileSplit[0]}{FileSplit[1]}{FileSplit[2]}")
-        os.system(f'Data\\Wget\\wget.exe "{FileSplit}"')
-        os.system("rename latest latest.json")
+        
+        r = requests.get(FileSplit)
+        with open("latest.json", 'wb') as fd:
+            for chunk in r.iter_content(chunk_size=128):
+                fd.write(chunk)
+
         Clear()
         try:
             with open("latest.json", "r") as file:
@@ -158,8 +201,10 @@ def SwitchGet():
         except FileNotFoundError:
             skyp = True
 
-        
-
+       
+    DBNameSave = []
+    AuthorSave = []
+    NameIsDB = []
     skyp = True    
     val = 0
     val2 = 0
@@ -170,9 +215,13 @@ def SwitchGet():
             try:
                 if DBUse["packages"][val]["name"].lower().startswith(Recherche) or DBUse["packages"][val]["name"].lower().endswith(Recherche):
                     if skyp == True:
-                        FileDownload.append(DBUse["packages"][val]["download"])
                         DBName = DBUse["packages"][val]["name"]
                         Author = DBUse["packages"][val]["author"]
+                        FileDownload.append(f"https://switchbru.com/appstore/zips/{DBName}.zip")
+                        DBNameSave.append(DBName)
+                        AuthorSave.append(Author)
+                        FilDirUse.append("\\")
+                        NameIsDB.append("AppsStore")
                         if val2 < 10:
                             print(f" [{val2}]  AppsStore {DBName} By {Author}")
                         else:
@@ -185,9 +234,13 @@ def SwitchGet():
             try:
                 if DBUse["packages"][val]["title"].lower().startswith(Recherche) or DBUse["packages"][val]["title"].lower().endswith(Recherche):
                     if skyp == True:
-                        FileDownload.append(DBUse["packages"][val]["download"])
                         DBName = DBUse["packages"][val]["name"]
                         Author = DBUse["packages"][val]["author"]
+                        FileDownload.append(f"https://switchbru.com/appstore/zips/{DBName}.zip")
+                        DBNameSave.append(DBName)
+                        AuthorSave.append(Author)
+                        FilDirUse.append("\\")
+                        NameIsDB.append("AppsStore")
                         if val2 < 10:
                             print(f" [{val2}]  AppsStore {DBName} By {Author}")
                         else:
@@ -200,9 +253,13 @@ def SwitchGet():
             try:
                 if DBUse["packages"][val]["author"].lower().startswith(Recherche) or DBUse["packages"][val]["author"].lower().endswith(Recherche):
                     if skyp == True:
-                        FileDownload.append(DBUse["packages"][val]["download"])
                         DBName = DBUse["packages"][val]["name"]
                         Author = DBUse["packages"][val]["author"]
+                        FileDownload.append(f"https://switchbru.com/appstore/zips/{DBName}.zip")
+                        DBNameSave.append(DBName)
+                        AuthorSave.append(Author)
+                        FilDirUse.append("\\")
+                        NameIsDB.append("AppsStore")
                         if val2 < 10:
                             print(f" [{val2}]  AppsStore {DBName} By {Author}")
                         else:
@@ -215,9 +272,13 @@ def SwitchGet():
             try:
                 if DBUse["packages"][val]["category"].lower() == Recherche:
                     if skyp == True:
-                        FileDownload.append(DBUse["packages"][val]["download"])
                         DBName = DBUse["packages"][val]["name"]
                         Author = DBUse["packages"][val]["author"]
+                        FileDownload.append(f"https://switchbru.com/appstore/zips/{DBName}.zip")
+                        DBNameSave.append(DBName)
+                        AuthorSave.append(Author)
+                        FilDirUse.append("\\")
+                        NameIsDB.append("AppsStore")
                         if val2 < 10:
                             print(f" [{val2}]  AppsStore {DBName} By {Author}")
                         else:
@@ -246,6 +307,9 @@ def SwitchGet():
                         if skyp == True:
                             FileDownload.append(DBPoyoTheme[val]["download"])
                             DBName = DBPoyoTheme[val]["name"]
+                            DBNameSave.append(DBName)
+                            AuthorSave.append(Author)
+                            NameIsDB.append("ThemePoyo")
                             if val2 < 10:
                                 print(f" [{val2}]  ThemePoyo {DBName} By {Author}")
                             else:
@@ -253,6 +317,7 @@ def SwitchGet():
                             val2 += 1
                             skyp = False
                             FilDir.append("Theme")
+                            FilDirUse.append("\\ulaunch\\themes\\")
                 except KeyError:
                     skyp = True
                 try:
@@ -260,6 +325,9 @@ def SwitchGet():
                         if skyp == True:
                             FileDownload.append(DBPoyoTheme[val]["download"])
                             DBName = DBPoyoTheme[val]["name"]
+                            DBNameSave.append(DBName)
+                            AuthorSave.append(Author)
+                            NameIsDB.append("ThemePoyo")
                             if val2 < 10:
                                 print(f" [{val2}]  ThemePoyo {DBName} By {Author}")
                             else:
@@ -268,6 +336,7 @@ def SwitchGet():
                             skyp = False
                             skyp2 = False
                             FilDir.append("Theme")
+                            FilDirUse.append("\\ulaunch\\themes\\")
                 except KeyError:
                     skyp = True
                 skyp = True
@@ -293,16 +362,89 @@ def SwitchGet():
     os.system(f'del "repo.json"')
     os.system(f'del "themes.json"')
 
-    val = 15
-    for DL in FileDownload:
-        val -= 1
+    while Recherche != 300:
+        try:
+            try:
+                val3 = 0
+                val2 = 0
+                val = 15
+                Clear()
+                for i in DBNameSave:
+                    if val2 < 10:
+                        print(f" [{val2}]  {NameIsDB[val2]} {DBNameSave[val2]} By {AuthorSave[val2]}")
+                    else:
+                        print(f" [{val2}] {NameIsDB[val2]} {DBNameSave[val2]} By {AuthorSave[val2]}")
+                    val2 += 1
+                    val3 +=1
 
-    if val == 15:
-        print(" Aucun résultat trouvé.")
-        val -= 1
-    while val != 0:
-        print("")
-        val -=1
+                for DL in FileDownload:
+                    val -= 1
+
+                if val == 15:
+                    print(" Aucun résultat trouvé.")
+                    val -= 1
+                while val != 0:
+                    print("")
+                    val -=1
+
+                print("\n (Q) Quiter\n")
+                RepDL = input("Entrer votre demande: ")
+                try:
+                    IntRepDL = int(RepDL)
+                except ValueError:
+                    pass
+
+                try:
+                    if RepDL == "q" or RepDL == "Q":
+                        break
+                    elif IntRepDL < val3:
+                        os.system(f'Data\\Wget\\wget.exe "{FileDownload[IntRepDL]}"')
     
-    print("\n Quiter\n")
-    input("Faite sur entrer quand vous êtes près: ")
+                        path = '.'
+                        
+                        files = os.listdir(path)
+                        for name in files:
+                            if name.endswith(".zip"):
+                                Rename = name
+
+                            elif name.endswith(".zip@raw=true"):
+                                Rename = name.replace('@raw=true','',1)
+                                os.system(f'ren "{name}" "{Rename}"')
+
+                        for L in Lettre:
+                            if os.path.exists(f"{L}:\\switch"):
+                                CopyPath = (f"{L}:")
+                                
+                        os.system(f'move "{Rename}" "{CopyPath}{FilDirUse[IntRepDL]}{Rename}"')
+                        os.system(f'Data\\7Zip\\7Zip.exe x "{CopyPath}{FilDirUse[IntRepDL]}{Rename}" -o"{CopyPath}{FilDirUse[IntRepDL]}" -y')
+                        os.system(f'del "{CopyPath}{FilDirUse[IntRepDL]}{Rename}"')
+    
+                        path = (f"{CopyPath}{FilDirUse[IntRepDL]}")
+                        files = os.listdir(path)
+                        for name in files:
+                            if name.endswith(".install"):
+                                os.system(f"del {path}{name}")
+                            if name.endswith(".exe"):
+                                os.system(f"del {path}{name}")
+                            if name.endswith(".nsp"):
+                                if not os.path.exists(f"{CopyPath}\\NSP"):
+                                    os.system(f'mkdir "{CopyPath}\\NSP"')
+                                os.system(f'move {path}{name} {CopyPath}\\NSP')
+                            if name.endswith(".nro") and name != "hbmenu.nro":
+                                os.system(f'move {path}{name} {CopyPath}\\switch')
+                            if name.startswith("info"):
+                                os.system(f"del {path}{name}")
+                            if name.startswith("readme"):
+                                os.system(f"del {path}{name}")
+                            if name.startswith("screen"):
+                                os.system(f"del {path}{name}")
+                    
+                except UnboundLocalError:
+                    pass
+                
+                skyp = False
+            except KeyError:
+                skyp = True
+        
+        except IndexError:
+            skyp = True

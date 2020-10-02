@@ -8,7 +8,7 @@ def PayloadLoader():# Menu [(9) Payload Loader]
     PayloadFin = False
     while InputPayload != "q":
         Clear()
-        print("Insérez tous vos payloads dans le dossier Payload\n")
+        print("Insérez tous vos payloads dans le dossier Payload (Pour les tests j'ai mis les payloads de rr ils seront retirés)\n")
         NBPayload = 0
         Payload = os.listdir("Payload")
         ChoisPayload = 30

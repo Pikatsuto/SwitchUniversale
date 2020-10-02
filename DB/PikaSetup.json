@@ -1,0 +1,22 @@
+[
+    {
+      "name" : "Atmosphere",
+      "author" : "Atmosphere-NX",
+      "preview" : "https://github.com/Atmosphere-NX/Atmosphere/raw/master/img/banner.png?raw=true",
+      "download" : {
+        "type" : "github",
+        "github" : "Atmosphere-NX/Atmosphere"
+      }
+    },
+    
+     {
+        "name" : "SXOS",
+        "author" : "Team-Xecuter",
+        "preview" : "https://sx.xecuter.com/img/demo/txos-menu.png",
+        "download" : {
+          "type" : "stable/beta",
+          "stable" : "https://sx.xecuter.com/download/SXOS_v2.9.2.zip",
+          "beta" : "https://sx.xecuter.com/download/SXOS_beta_v3.0.5.zip"
+        }
+    }
+]
