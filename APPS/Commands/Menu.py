@@ -9,7 +9,7 @@ def Menu():# Appelle la fonction clear et gère le menu
     print(" [1]  (Fait) NSC Builder                                                               Is My Switch Patched (Fait) [11]")
     print(" [2]  (Fait) [NSP NSZ XCi XCZ] Converter                                                     Install Driver (Fait) [12]\n")
                     
-    print(" [3]  (Fait) LanPlay                                            SwitchGet (Gestionnaire D'Apps Et Theme) (À Faire) [13]")
+    print(" [3]  (Fait) LanPlay                                           SwitchGet (Gestionnaire D'Apps Et Theme) (En Cours) [13]")
     print(" [4]  (Fait) SysDVR                                                               SD Cleaner / Installer (À Faire) [14]\n")
                 
     print(" [5]  (À Faire) SD Updater                                                                   NSP Spliter (A Faire) [15]")
