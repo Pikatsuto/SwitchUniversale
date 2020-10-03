@@ -1,54 +1,5 @@
 # Switch Universale
 
-
-## EN
-
-
-## Created by Pikatsuto with Murasaki, Edzi and M3ggy ##
-
-#### SwitchUniversal aims to bring together all Switch programs my steps alone
-
-I site PoyoTools IcosaSwitch and SwitchTools which already have this goal but the problem is that they do not really bring together all you need to have the 3 to do everything
-
-#### but it's not just that SwitchUniversal brings new things too:
-
-SwitchGet: This program is a packer manager that will be connected to the Poyo Icosa AppsStore and SwitchGet database, with this one we will be able to install anything on your SD using a simple command
-SwitchGet will be accessible in SwitchUniversale but also in the cms directly.
-
-#### There will also be other programs linked to SwitchGet:
-```
-SD Updater
-SD Corruption Cleaner
-SD Cleaner/Reinstall
-SD Backup
-```
-#### Feature list:
-```
-(Done)  NSC Builder
-(Done)  [NSP NSZ XCi XCZ] Converter
-(Done)  LanPlay
-(Done)  SysDVR
-(To Do) SD Updater
-(To Do) SD Corruption Cleaner
-(To Do) SD Backup
-(Done)  [Android Linux] Flasher
-(Done)  Payload Loader
-(Done)  Is My Switch Patched
-(Done)  Install Driver
-(To Do) SwitchGet (Apps And Theme Manager)
-(To Do) SD Cleaner
-(To Do) NSP Spliter
-(To Do) NST To XCI
-```
-#### SwitchUniversale will also be releasing a graphical version a little later for those who have difficulties with the terminal for SwitchGet for example.
-
-and recently SwitchGet will also be available independently of SwitchUniversale for developers
-
-#### Compatibility:
-#### For the first Windows versions Once the program is stable I'll attack a Linux version
-
-If there's a lot of people interested, there will probably be one of the public beta as I'm between half and two thirds of them.
-
 ## FR
 
 ## Créer par Pikatsuto avec Murasaki , Edzi et M3ggy
@@ -82,10 +33,11 @@ SD Backup
 (Fait)     Payload Loader
 (Fait)     Is My Switch Patched
 (Fait)     Install Driver
-(À Faire)  SwitchGet (Gestionnaire Apps Et Theme)
+(En Cours)  SwitchGet (Gestionnaire Apps Et Theme)
 (À Faire)  SD Cleaner
 (À Faire)  NSP Spliter
-(À Faire)  NST To XCI
+(À Faire)  NSP To XCI(À Faire)  NSP Spliter
+(À Faire)  Update SwitchUniversal
 ```
 #### SwitchUniversale verra aussi Sortir un peut plus tard un version graphique pour ceux aillant des difficulté avec le terminal pour SwitchGet par exemple
 
